@@ -465,6 +465,10 @@
                     } else {
                         this.handleTextMessage(message);
                     }
+                    _converse.emit('messageAdded', {
+                        'message': message,
+                        'chatbox': this.model
+                    });
                 },
 
                 createMessageStanza: function (message) {
